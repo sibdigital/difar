@@ -4,7 +4,7 @@ create table if not exists agrc.cls_weather_station
     id                  bigserial primary key,
     id_organization     bigint not null,
     description         jsonb,
-    point               geometry,
+    point               point,
     constraint fk_id_organization foreign key (id_organization) references dict.cls_organization (id)
 )
 inherits (base.base_classifier)
@@ -30,7 +30,7 @@ create table if not exists agrc.cls_gps_module
     id                  bigserial primary key,
     id_organization     bigint not null,
     description         jsonb,
-    point               geometry,
+    point               point,
     constraint fk_id_organization foreign key (id_organization) references dict.cls_organization (id)
 )
 inherits (base.base_classifier)

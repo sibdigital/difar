@@ -41,7 +41,7 @@ inherits (base.base_classifier)
 --Справочник «Удобрение»
 create table if not exists agrc.cls_fertilizer
 (
-    id          bigserialprimary key,
+    id          bigserial primary key,
     id_unit     bigint not null,
     max_consum  decimal(10,5),
     min_consum  decimal(10,5),

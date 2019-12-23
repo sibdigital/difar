@@ -8,7 +8,7 @@ inherits (base.base_coded_classifier)
 --Справочник «Район»
 create table if not exists dict.cls_district
 (
-    id bigserial primary key
+    id bigserial primary key,
     id_region    bigint not null,
     constraint fk_id_region foreign key (id_region) references dict.cls_region (id)
 )
